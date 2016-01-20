@@ -28,13 +28,16 @@ class FindingMatchViewController: UIViewController {
         self.cancelButton.alpha = 0.0
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool)
+    {
         super.viewWillAppear(animated)
         
+        self.cancelButton.frame.origin.y = CGRectGetHeight(self.view.bounds)
+        self.cancelButton.alpha = 1.0
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             self.findingMatchImage.alpha = 1.0
             self.ballImage.alpha = 1.0
-            self.cancelButton.alpha = 1.0
+            self.cancelButton.layoutIfNeeded()
             }) { (finished) -> Void in
                 self.animateBall()
         }
@@ -69,7 +72,7 @@ class FindingMatchViewController: UIViewController {
             case .Found(let match):
                 self.timer.invalidate()
                 self.match = match
-                self.performSegueWithIdentifier("matchFound", sender: nil)
+//                self.performSegueWithIdentifier("matchFound", sender: nil)
             default:
                 break
             }

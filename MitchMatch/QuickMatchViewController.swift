@@ -23,10 +23,12 @@ class QuickMatchViewController: UIViewController {
                 print(error)
             } else {
                 print("Finding match...")
-                UIView.animateWithDuration(0.5, animations: { () -> Void in
-                    self.paddlesImage.frame.origin.y = -CGRectGetHeight(self.paddlesImage.bounds)
+                UIView.animateWithDuration(0.5) {
                     self.matchButton.frame.origin.x = CGRectGetWidth(self.view.bounds)
-                    }, completion: { (finished) -> Void in
+                }
+                UIView.animateWithDuration(0.5, delay: 0.25, options: [], animations: { 
+                    self.paddlesImage.frame.origin.y = -CGRectGetHeight(self.paddlesImage.bounds)
+                    }, completion: { _ in
                         self.performSegueWithIdentifier("findingMatch", sender: nil)
                 })
             }
