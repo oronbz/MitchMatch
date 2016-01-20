@@ -16,15 +16,32 @@ class FindingMatchViewController: UIViewController {
     
     @IBOutlet weak var findingMatchImage: UIImageView!
     @IBOutlet weak var ballImage: UIView!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var ballLeadingConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         timer = NSTimer.scheduledTimerWithTimeInterval(pollingInterval, target: self, selector: "pollQuickMatch", userInfo: nil, repeats: true)
+        
+        self.findingMatchImage.alpha = 0.0
+        self.ballImage.alpha = 0.0
+        self.cancelButton.alpha = 0.0
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.findingMatchImage.alpha = 1.0
+            self.ballImage.alpha = 1.0
+            self.cancelButton.alpha = 1.0
+            }) { (finished) -> Void in
+                self.animateBall()
+        }
+    }
+    
+    private func animateBall()
+    {
         self.view.layoutIfNeeded()
         UIView.animateWithDuration(0.7, delay: 0, options: [.CurveEaseInOut, .Autoreverse, .Repeat], animations: {
             self.ballLeadingConstraint.constant = CGRectGetWidth(self.findingMatchImage.bounds) - CGRectGetWidth(self.ballImage.bounds)

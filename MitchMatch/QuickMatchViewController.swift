@@ -11,6 +11,9 @@ import UIKit
 class QuickMatchViewController: UIViewController {
     var user:User!
 
+    @IBOutlet weak var paddlesImage: UIImageView!
+    @IBOutlet weak var matchButton: UIButton!
+    
     override func viewDidLoad() {
        super.viewDidLoad()
     }
@@ -20,7 +23,12 @@ class QuickMatchViewController: UIViewController {
                 print(error)
             } else {
                 print("Finding match...")
-                self.performSegueWithIdentifier("findingMatch", sender: nil)
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    self.paddlesImage.frame.origin.y = -CGRectGetHeight(self.paddlesImage.bounds)
+                    self.matchButton.frame.origin.x = CGRectGetWidth(self.view.bounds)
+                    }, completion: { (finished) -> Void in
+                        self.performSegueWithIdentifier("findingMatch", sender: nil)
+                })
             }
         }
     }

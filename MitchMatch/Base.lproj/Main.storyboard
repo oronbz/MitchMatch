@@ -70,7 +70,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="hsX-4D-kC8"/>
                     <connections>
-                        <segue destination="4dE-7e-zD3" kind="show" identifier="findingMatch" id="Oys-QE-shX"/>
+                        <outlet property="matchButton" destination="gDj-ur-FMC" id="QkZ-ZJ-frq"/>
+                        <outlet property="paddlesImage" destination="MWC-bx-if4" id="jV7-5J-foV"/>
+                        <segue destination="4dE-7e-zD3" kind="show" identifier="findingMatch" animates="NO" id="Oys-QE-shX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IER-PD-eUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,6 +128,7 @@
                     <connections>
                         <outlet property="ballImage" destination="WNh-aE-LgX" id="kzT-i2-PPp"/>
                         <outlet property="ballLeadingConstraint" destination="nfQ-uA-Csz" id="qfV-k9-ESY"/>
+                        <outlet property="cancelButton" destination="MxT-FP-hmW" id="OmC-LN-mfJ"/>
                         <outlet property="findingMatchImage" destination="DiB-i6-EZO" id="7hy-Xs-Cn9"/>
                         <segue destination="5OP-79-Kuh" kind="show" identifier="matchFound" id="jMf-Ab-MTc"/>
                     </connections>
