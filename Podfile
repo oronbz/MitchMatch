@@ -6,5 +6,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'MitchMatch' do
     pod 'Alamofire'
+    pod 'AlamofireImage'
 end
 

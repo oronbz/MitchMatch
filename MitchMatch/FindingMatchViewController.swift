@@ -12,7 +12,7 @@ class FindingMatchViewController: UIViewController {
     var user:User!
     var match: Match!
     var timer: NSTimer!
-    let pollingInterval:NSTimeInterval = 2
+    let pollingInterval:NSTimeInterval = 5
     
     @IBOutlet weak var findingMatchImage: UIImageView!
     @IBOutlet weak var ballImage: UIView!
@@ -89,6 +89,7 @@ class FindingMatchViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "matchFound" {
             let matchFoundController = segue.destinationViewController as! MatchFoundViewController
+            matchFoundController.user = user
             matchFoundController.match = match
         }
     }

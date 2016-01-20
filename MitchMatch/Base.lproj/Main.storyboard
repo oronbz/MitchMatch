@@ -153,17 +153,33 @@
                                 <rect key="frame" x="162" y="566" width="51" height="51"/>
                                 <state key="normal" image="ic_Close"/>
                                 <connections>
-                                    <segue destination="fE6-iy-Esr" kind="unwind" unwindAction="backToQuickMatch:" id="LPs-9i-jYC"/>
+                                    <action selector="confirmPressed:" destination="5OP-79-Kuh" eventType="touchUpInside" id="mNc-Ow-3iK"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xF-xJ-g39">
                                 <rect key="frame" x="87" y="269" width="200" height="129"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blogpost-placeholder-100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-qs-d46">
-                                        <rect key="frame" x="100" y="0.0" width="100" height="100"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blogpost-placeholder-100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-wa-j8i">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLB-ji-1FN">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" red="0.0" green="0.54509803921568623" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7R-lE-k6w">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" red="0.9137254901960784" green="0.41568627450980389" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blogpost-placeholder-100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-qs-d46">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="DOt-qX-LEX"/>
+                                            <constraint firstAttribute="height" constant="100" id="ol1-9w-N3R"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blogpost-placeholder-100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-wa-j8i">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="chf-x6-OmM"/>
+                                            <constraint firstAttribute="height" constant="100" id="ewY-ym-3O0"/>
+                                        </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_pics" translatesAutoresizingMaskIntoConstraints="NO" id="oSw-qt-MCL">
                                         <rect key="frame" x="-1" y="-34" width="202" height="197"/>
@@ -171,13 +187,21 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="R7R-lE-k6w" firstAttribute="bottom" secondItem="sRa-qs-d46" secondAttribute="bottom" id="19J-fQ-4tR"/>
+                                    <constraint firstItem="GLB-ji-1FN" firstAttribute="top" secondItem="Hfl-wa-j8i" secondAttribute="top" id="3Fu-5Z-IQl"/>
                                     <constraint firstItem="Hfl-wa-j8i" firstAttribute="leading" secondItem="7xF-xJ-g39" secondAttribute="leading" id="82l-Ik-XiC"/>
                                     <constraint firstAttribute="trailing" secondItem="sRa-qs-d46" secondAttribute="trailing" id="B6p-bn-LBQ"/>
+                                    <constraint firstItem="R7R-lE-k6w" firstAttribute="trailing" secondItem="sRa-qs-d46" secondAttribute="trailing" id="BrF-85-VqX"/>
+                                    <constraint firstItem="GLB-ji-1FN" firstAttribute="bottom" secondItem="Hfl-wa-j8i" secondAttribute="bottom" id="CHT-Jm-Qpz"/>
+                                    <constraint firstItem="GLB-ji-1FN" firstAttribute="leading" secondItem="Hfl-wa-j8i" secondAttribute="leading" id="Hhe-77-jsd"/>
                                     <constraint firstItem="oSw-qt-MCL" firstAttribute="centerY" secondItem="7xF-xJ-g39" secondAttribute="centerY" id="QJs-2S-nTz"/>
+                                    <constraint firstItem="GLB-ji-1FN" firstAttribute="trailing" secondItem="Hfl-wa-j8i" secondAttribute="trailing" id="Rmx-kh-gnN"/>
                                     <constraint firstItem="sRa-qs-d46" firstAttribute="width" secondItem="Hfl-wa-j8i" secondAttribute="width" id="ScS-Oz-an9"/>
                                     <constraint firstItem="sRa-qs-d46" firstAttribute="leading" secondItem="Hfl-wa-j8i" secondAttribute="trailing" id="XId-gb-PZL"/>
                                     <constraint firstItem="sRa-qs-d46" firstAttribute="top" secondItem="7xF-xJ-g39" secondAttribute="top" id="aIQ-6r-0EA"/>
                                     <constraint firstItem="oSw-qt-MCL" firstAttribute="centerX" secondItem="7xF-xJ-g39" secondAttribute="centerX" id="e1f-N2-BNh"/>
+                                    <constraint firstItem="R7R-lE-k6w" firstAttribute="top" secondItem="sRa-qs-d46" secondAttribute="top" id="gBL-eV-AQW"/>
+                                    <constraint firstItem="R7R-lE-k6w" firstAttribute="leading" secondItem="sRa-qs-d46" secondAttribute="leading" id="jAN-re-2lF"/>
                                     <constraint firstAttribute="bottom" secondItem="Hfl-wa-j8i" secondAttribute="bottom" constant="29" id="uOf-ke-hSb"/>
                                     <constraint firstAttribute="bottom" secondItem="sRa-qs-d46" secondAttribute="bottom" constant="29" id="uTF-aH-zt7"/>
                                     <constraint firstItem="Hfl-wa-j8i" firstAttribute="top" secondItem="7xF-xJ-g39" secondAttribute="top" id="wO6-qy-aZB"/>
@@ -196,6 +220,7 @@
                         <outlet property="containerView" destination="7xF-xJ-g39" id="IlX-Er-bLM"/>
                         <outlet property="player1Image" destination="Hfl-wa-j8i" id="yY0-9q-9Lb"/>
                         <outlet property="player2Image" destination="sRa-qs-d46" id="Jji-rl-7qt"/>
+                        <segue destination="fE6-iy-Esr" kind="unwind" identifier="backToQuickMatch" unwindAction="backToQuickMatch:" id="h7N-0X-4xR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tpc-Dg-LON" userLabel="First Responder" sceneMemberID="firstResponder"/>
