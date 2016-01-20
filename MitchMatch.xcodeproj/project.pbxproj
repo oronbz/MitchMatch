@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08C3F6E407553FB8125EC7D2 /* Pods_MitchMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D1C6807FEF2F096E5D3ED2 /* Pods_MitchMatch.framework */; };
 		92971F7D1C4F8761002DB7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92971F7C1C4F8761002DB7C6 /* AppDelegate.swift */; };
 		92971F7F1C4F8761002DB7C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92971F7E1C4F8761002DB7C6 /* ViewController.swift */; };
 		92971F821C4F8761002DB7C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92971F801C4F8761002DB7C6 /* Main.storyboard */; };
 		92971F841C4F8761002DB7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92971F831C4F8761002DB7C6 /* Assets.xcassets */; };
 		92971F871C4F8761002DB7C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92971F851C4F8761002DB7C6 /* LaunchScreen.storyboard */; };
+		92971F991C4F8F66002DB7C6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92971F961C4F8F66002DB7C6 /* FBSDKCoreKit.framework */; };
+		92971F9A1C4F8F66002DB7C6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92971F971C4F8F66002DB7C6 /* FBSDKLoginKit.framework */; };
+		92971F9B1C4F8F66002DB7C6 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92971F981C4F8F66002DB7C6 /* FBSDKShareKit.framework */; };
+		92971F9E1C4F98A8002DB7C6 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92971F9D1C4F98A8002DB7C6 /* UsersAPI.swift */; };
+		92971FA11C4F98C9002DB7C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92971FA01C4F98C9002DB7C6 /* User.swift */; };
+		92971FA41C4F99DA002DB7C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92971FA31C4F99DA002DB7C6 /* Constants.swift */; };
+		92971FA91C4FC229002DB7C6 /* QuickMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92971FA81C4FC229002DB7C6 /* QuickMatchViewController.swift */; };
+		92971FB51C4FCD3A002DB7C6 /* FindingMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92971FB41C4FCD3A002DB7C6 /* FindingMatchViewController.swift */; };
+		92971FB71C4FD629002DB7C6 /* QuickMatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92971FB61C4FD629002DB7C6 /* QuickMatchResult.swift */; };
+		92971FB91C4FD808002DB7C6 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92971FB81C4FD808002DB7C6 /* Match.swift */; };
+		92971FBF1C4FDE00002DB7C6 /* MatchFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92971FBE1C4FDE00002DB7C6 /* MatchFoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65D1C6807FEF2F096E5D3ED2 /* Pods_MitchMatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MitchMatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CF78271085232BC1B994DE3 /* Pods-MitchMatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MitchMatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-MitchMatch/Pods-MitchMatch.release.xcconfig"; sourceTree = "<group>"; };
+		8F17711F655B523FD52FD8FA /* Pods-MitchMatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MitchMatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MitchMatch/Pods-MitchMatch.debug.xcconfig"; sourceTree = "<group>"; };
 		92971F791C4F8761002DB7C6 /* MitchMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MitchMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92971F7C1C4F8761002DB7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92971F7E1C4F8761002DB7C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +37,18 @@
 		92971F831C4F8761002DB7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92971F861C4F8761002DB7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92971F881C4F8761002DB7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92971F961C4F8F66002DB7C6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		92971F971C4F8F66002DB7C6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		92971F981C4F8F66002DB7C6 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		92971F9D1C4F98A8002DB7C6 /* UsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
+		92971FA01C4F98C9002DB7C6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		92971FA31C4F99DA002DB7C6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		92971FA81C4FC229002DB7C6 /* QuickMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickMatchViewController.swift; sourceTree = "<group>"; };
+		92971FAA1C4FC2AF002DB7C6 /* MitchMatch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MitchMatch-Bridging-Header.h"; sourceTree = "<group>"; };
+		92971FB41C4FCD3A002DB7C6 /* FindingMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindingMatchViewController.swift; sourceTree = "<group>"; };
+		92971FB61C4FD629002DB7C6 /* QuickMatchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickMatchResult.swift; sourceTree = "<group>"; };
+		92971FB81C4FD808002DB7C6 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		92971FBE1C4FDE00002DB7C6 /* MatchFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchFoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92971F9A1C4F8F66002DB7C6 /* FBSDKLoginKit.framework in Frameworks */,
+				92971F991C4F8F66002DB7C6 /* FBSDKCoreKit.framework in Frameworks */,
+				92971F9B1C4F8F66002DB7C6 /* FBSDKShareKit.framework in Frameworks */,
+				08C3F6E407553FB8125EC7D2 /* Pods_MitchMatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +69,10 @@
 		92971F701C4F8761002DB7C6 = {
 			isa = PBXGroup;
 			children = (
+				92971F951C4F8F5E002DB7C6 /* Frameworks */,
 				92971F7B1C4F8761002DB7C6 /* MitchMatch */,
 				92971F7A1C4F8761002DB7C6 /* Products */,
+				C41808C1EF04BB3B83217889 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +87,83 @@
 		92971F7B1C4F8761002DB7C6 /* MitchMatch */ = {
 			isa = PBXGroup;
 			children = (
+				92971FAD1C4FC3A0002DB7C6 /* Views */,
+				92971FA71C4FC217002DB7C6 /* Controllers */,
+				92971FA21C4F99CB002DB7C6 /* Helpers */,
+				92971F9F1C4F98BC002DB7C6 /* Models */,
+				92971F9C1C4F9874002DB7C6 /* Stores */,
 				92971F7C1C4F8761002DB7C6 /* AppDelegate.swift */,
-				92971F7E1C4F8761002DB7C6 /* ViewController.swift */,
 				92971F801C4F8761002DB7C6 /* Main.storyboard */,
 				92971F831C4F8761002DB7C6 /* Assets.xcassets */,
 				92971F851C4F8761002DB7C6 /* LaunchScreen.storyboard */,
 				92971F881C4F8761002DB7C6 /* Info.plist */,
+				92971FAA1C4FC2AF002DB7C6 /* MitchMatch-Bridging-Header.h */,
 			);
 			path = MitchMatch;
+			sourceTree = "<group>";
+		};
+		92971F951C4F8F5E002DB7C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92971F961C4F8F66002DB7C6 /* FBSDKCoreKit.framework */,
+				92971F971C4F8F66002DB7C6 /* FBSDKLoginKit.framework */,
+				92971F981C4F8F66002DB7C6 /* FBSDKShareKit.framework */,
+				65D1C6807FEF2F096E5D3ED2 /* Pods_MitchMatch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92971F9C1C4F9874002DB7C6 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				92971F9D1C4F98A8002DB7C6 /* UsersAPI.swift */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
+		92971F9F1C4F98BC002DB7C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92971FA01C4F98C9002DB7C6 /* User.swift */,
+				92971FB61C4FD629002DB7C6 /* QuickMatchResult.swift */,
+				92971FB81C4FD808002DB7C6 /* Match.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		92971FA21C4F99CB002DB7C6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				92971FA31C4F99DA002DB7C6 /* Constants.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		92971FA71C4FC217002DB7C6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				92971F7E1C4F8761002DB7C6 /* ViewController.swift */,
+				92971FA81C4FC229002DB7C6 /* QuickMatchViewController.swift */,
+				92971FB41C4FCD3A002DB7C6 /* FindingMatchViewController.swift */,
+				92971FBE1C4FDE00002DB7C6 /* MatchFoundViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		92971FAD1C4FC3A0002DB7C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C41808C1EF04BB3B83217889 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F17711F655B523FD52FD8FA /* Pods-MitchMatch.debug.xcconfig */,
+				6CF78271085232BC1B994DE3 /* Pods-MitchMatch.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92971F8B1C4F8761002DB7C6 /* Build configuration list for PBXNativeTarget "MitchMatch" */;
 			buildPhases = (
+				A79DBAC9F89A54BE176FFDC7 /* Check Pods Manifest.lock */,
 				92971F751C4F8761002DB7C6 /* Sources */,
 				92971F761C4F8761002DB7C6 /* Frameworks */,
 				92971F771C4F8761002DB7C6 /* Resources */,
+				027914247C73D17113638ADF /* Embed Pods Frameworks */,
+				B51AE3A4448F0A8A1AC32E38 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +235,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		027914247C73D17113638ADF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MitchMatch/Pods-MitchMatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A79DBAC9F89A54BE176FFDC7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B51AE3A4448F0A8A1AC32E38 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MitchMatch/Pods-MitchMatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92971F751C4F8761002DB7C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92971FA41C4F99DA002DB7C6 /* Constants.swift in Sources */,
+				92971FA11C4F98C9002DB7C6 /* User.swift in Sources */,
+				92971FB91C4FD808002DB7C6 /* Match.swift in Sources */,
+				92971FB71C4FD629002DB7C6 /* QuickMatchResult.swift in Sources */,
 				92971F7F1C4F8761002DB7C6 /* ViewController.swift in Sources */,
+				92971FBF1C4FDE00002DB7C6 /* MatchFoundViewController.swift in Sources */,
+				92971FB51C4FCD3A002DB7C6 /* FindingMatchViewController.swift in Sources */,
+				92971F9E1C4F98A8002DB7C6 /* UsersAPI.swift in Sources */,
+				92971FA91C4FC229002DB7C6 /* QuickMatchViewController.swift in Sources */,
 				92971F7D1C4F8761002DB7C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,23 +406,38 @@
 		};
 		92971F8C1C4F8761002DB7C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F17711F655B523FD52FD8FA /* Pods-MitchMatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MitchMatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bz.oron.MitchMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MitchMatch/MitchMatch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		92971F8D1C4F8761002DB7C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CF78271085232BC1B994DE3 /* Pods-MitchMatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MitchMatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bz.oron.MitchMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MitchMatch/MitchMatch-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -284,6 +460,7 @@
 				92971F8D1C4F8761002DB7C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

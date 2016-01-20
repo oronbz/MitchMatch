@@ -1,25 +1,179 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uxh-DR-wM2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MitchMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="jPQ-Gd-zlH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jPQ-Gd-zlH" secondAttribute="trailing" id="CDi-cX-WQj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jPQ-Gd-zlH" secondAttribute="bottom" id="Hdq-Ba-QEy"/>
+                            <constraint firstItem="jPQ-Gd-zlH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QqU-Bc-F68"/>
+                            <constraint firstItem="jPQ-Gd-zlH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wCX-lK-eGx"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qtp-Hw-rih"/>
+                    <connections>
+                        <segue destination="kQd-eO-A2Q" kind="show" identifier="loggedIn" id="BvV-lz-9ox"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1147" y="227"/>
+        </scene>
+        <!--Quick Match View Controller-->
+        <scene sceneID="gjD-hh-SQj">
+            <objects>
+                <viewController id="kQd-eO-A2Q" customClass="QuickMatchViewController" customModule="MitchMatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uv3-f4-rFa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dut-dm-bQH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eEB-nL-zhm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="5TC-eW-Cpn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDj-ur-FMC">
+                                <rect key="frame" x="74" y="314" width="226" height="39"/>
+                                <state key="normal" image="QuickMatch"/>
+                                <connections>
+                                    <action selector="quickMatchPressed:" destination="kQd-eO-A2Q" eventType="touchUpInside" id="odl-hf-pfg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MatkaBall" translatesAutoresizingMaskIntoConstraints="NO" id="ddN-tY-rcH">
+                                <rect key="frame" x="16" y="50" width="342" height="221"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ddN-tY-rcH" firstAttribute="top" secondItem="uv3-f4-rFa" secondAttribute="bottom" constant="30" id="7ee-9i-TQ6"/>
+                            <constraint firstItem="gDj-ur-FMC" firstAttribute="centerX" secondItem="eEB-nL-zhm" secondAttribute="centerX" id="8JO-Iv-bte"/>
+                            <constraint firstItem="ddN-tY-rcH" firstAttribute="centerX" secondItem="eEB-nL-zhm" secondAttribute="centerX" id="foi-3I-aWT"/>
+                            <constraint firstItem="gDj-ur-FMC" firstAttribute="centerY" secondItem="eEB-nL-zhm" secondAttribute="centerY" id="mkb-PP-hgE"/>
+                            <constraint firstItem="gDj-ur-FMC" firstAttribute="top" secondItem="ddN-tY-rcH" secondAttribute="bottom" constant="11" id="qUE-9q-D9d"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qUE-9q-D9d"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="hsX-4D-kC8"/>
+                    <connections>
+                        <segue destination="4dE-7e-zD3" kind="show" identifier="findingMatch" id="Oys-QE-shX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IER-PD-eUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679.5" y="234.5"/>
+        </scene>
+        <!--Finding Match View Controller-->
+        <scene sceneID="J0V-rB-heH">
+            <objects>
+                <viewController id="4dE-7e-zD3" customClass="FindingMatchViewController" customModule="MitchMatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k9L-b8-k7u"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yqz-g9-oa9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pea-En-Ehh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finding match..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If6-XX-2vK">
+                                <rect key="frame" x="126" y="323" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxT-FP-hmW">
+                                <rect key="frame" x="163" y="478" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="4dE-7e-zD3" eventType="touchUpInside" id="tg0-aP-OOZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="5OP-79-Kuh" kind="show" identifier="matchFound" id="jMf-Ab-MTc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUX-0R-9jE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2218.5" y="234.5"/>
+        </scene>
+        <!--Match Found View Controller-->
+        <scene sceneID="AxO-Qa-ZNP">
+            <objects>
+                <viewController id="5OP-79-Kuh" customClass="MatchFoundViewController" customModule="MitchMatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="msP-cb-tMm"/>
+                        <viewControllerLayoutGuide type="bottom" id="KQw-XT-gVv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JCX-Iy-yp0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s5-JE-nl0">
+                                <rect key="frame" x="160" y="464" width="55" height="30"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <segue destination="fE6-iy-Esr" kind="unwind" unwindAction="backToQuickMatch:" id="LPs-9i-jYC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tpc-Dg-LON" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fE6-iy-Esr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2778.5" y="234.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nB5-04-DSk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="uxh-DR-wM2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s7A-ho-NUf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="72g-rE-cPb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6e-Gr-FjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678.5" y="226.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="375" height="667"/>
+        <image name="MatkaBall" width="342" height="221"/>
+        <image name="QuickMatch" width="226" height="39"/>
+    </resources>
 </document>
