@@ -1,0 +1,6 @@
+framework module Pods_MitchMatch {
+  umbrella header "Pods-MitchMatch-umbrella.h"
+
+  export *
+  module * { export * }
+}
