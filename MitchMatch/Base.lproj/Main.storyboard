@@ -156,28 +156,30 @@
                                     <segue destination="fE6-iy-Esr" kind="unwind" unwindAction="backToQuickMatch:" id="LPs-9i-jYC"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xF-xJ-g39">
-                                <rect key="frame" x="86" y="240" width="202" height="187"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xF-xJ-g39">
+                                <rect key="frame" x="87" y="269" width="200" height="129"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blogpost-placeholder-100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-qs-d46">
-                                        <rect key="frame" x="101" y="0.0" width="101" height="167"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blogpost-placeholder-100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-qs-d46">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="100"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blogpost-placeholder-100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-wa-j8i">
-                                        <rect key="frame" x="0.0" y="0.0" width="101" height="167"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blogpost-placeholder-100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-wa-j8i">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_pics" translatesAutoresizingMaskIntoConstraints="NO" id="oSw-qt-MCL">
-                                        <rect key="frame" x="0.0" y="-5" width="202" height="197"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_pics" translatesAutoresizingMaskIntoConstraints="NO" id="oSw-qt-MCL">
+                                        <rect key="frame" x="-1" y="-34" width="202" height="197"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Hfl-wa-j8i" firstAttribute="leading" secondItem="7xF-xJ-g39" secondAttribute="leading" id="82l-Ik-XiC"/>
                                     <constraint firstAttribute="trailing" secondItem="sRa-qs-d46" secondAttribute="trailing" id="B6p-bn-LBQ"/>
+                                    <constraint firstItem="oSw-qt-MCL" firstAttribute="centerY" secondItem="7xF-xJ-g39" secondAttribute="centerY" id="QJs-2S-nTz"/>
                                     <constraint firstItem="sRa-qs-d46" firstAttribute="width" secondItem="Hfl-wa-j8i" secondAttribute="width" id="ScS-Oz-an9"/>
                                     <constraint firstItem="sRa-qs-d46" firstAttribute="leading" secondItem="Hfl-wa-j8i" secondAttribute="trailing" id="XId-gb-PZL"/>
                                     <constraint firstItem="sRa-qs-d46" firstAttribute="top" secondItem="7xF-xJ-g39" secondAttribute="top" id="aIQ-6r-0EA"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hfl-wa-j8i" secondAttribute="bottom" constant="20" id="uOf-ke-hSb"/>
-                                    <constraint firstAttribute="bottom" secondItem="sRa-qs-d46" secondAttribute="bottom" constant="20" id="uTF-aH-zt7"/>
+                                    <constraint firstItem="oSw-qt-MCL" firstAttribute="centerX" secondItem="7xF-xJ-g39" secondAttribute="centerX" id="e1f-N2-BNh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hfl-wa-j8i" secondAttribute="bottom" constant="29" id="uOf-ke-hSb"/>
+                                    <constraint firstAttribute="bottom" secondItem="sRa-qs-d46" secondAttribute="bottom" constant="29" id="uTF-aH-zt7"/>
                                     <constraint firstItem="Hfl-wa-j8i" firstAttribute="top" secondItem="7xF-xJ-g39" secondAttribute="top" id="wO6-qy-aZB"/>
                                 </constraints>
                             </view>

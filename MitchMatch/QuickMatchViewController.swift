@@ -18,7 +18,7 @@ class QuickMatchViewController: UIViewController {
        super.viewDidLoad()
     }
     @IBAction func quickMatchPressed(sender: AnyObject) {
-        UsersAPI().cancelQuickMatch(user) { error in
+        UsersAPI().quickMatch(user) { error in
             if error != nil {
                 print(error)
             } else {
