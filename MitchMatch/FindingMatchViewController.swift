@@ -13,9 +13,24 @@ class FindingMatchViewController: UIViewController {
     var match: Match!
     var timer: NSTimer!
     let pollingInterval:NSTimeInterval = 2
+    
+    @IBOutlet weak var findingMatchImage: UIImageView!
+    @IBOutlet weak var ballImage: UIView!
+    @IBOutlet weak var ballLeadingConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         timer = NSTimer.scheduledTimerWithTimeInterval(pollingInterval, target: self, selector: "pollQuickMatch", userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.layoutIfNeeded()
+        UIView.animateWithDuration(0.7, delay: 0, options: [.CurveEaseInOut, .Autoreverse, .Repeat], animations: {
+            self.ballLeadingConstraint.constant = CGRectGetWidth(self.findingMatchImage.bounds) - CGRectGetWidth(self.ballImage.bounds)
+            self.ballImage.backgroundColor = UIColor(red: 233/255.0, green: 106/255.0, blue: 37/255.0, alpha: 1.0)
+            self.view.layoutIfNeeded()
+            }, completion: nil)
     }
     
     @IBAction func cancelPressed(sender: AnyObject) {

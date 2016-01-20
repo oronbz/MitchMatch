@@ -14,10 +14,12 @@ class ViewController: UIViewController {
     
     var loginButton: FBSDKLoginButton!
     var user: User!
-
+    @IBOutlet weak var logoCenterYConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton = FBSDKLoginButton()
+        loginButton.alpha = 0
         loginButton.readPermissions = ["public_profile", "email"]
         loginButton.center = self.view.center
         view.addSubview(loginButton)
@@ -40,6 +42,18 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             loggedIn()
+        }
+        
+        if logoCenterYConstraint.constant == 0 {
+            view.layoutIfNeeded()
+            UIView.animateWithDuration(0.5, delay: 0.5, options: .CurveEaseOut, animations: {
+                self.logoCenterYConstraint.constant = -150
+                self.view.layoutIfNeeded()
+                }, completion: { _ in
+                    UIView.animateWithDuration(0.25) {
+                        self.loginButton.alpha = 1
+                    }
+            })
         }
     }
     

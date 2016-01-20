@@ -17,20 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="jPQ-Gd-zlH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_Mitch_match_logo" translatesAutoresizingMaskIntoConstraints="NO" id="zQz-1b-QW8">
+                                <rect key="frame" x="98" y="273" width="178" height="121"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.69803921570000005" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jPQ-Gd-zlH" secondAttribute="trailing" id="CDi-cX-WQj"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jPQ-Gd-zlH" secondAttribute="bottom" id="Hdq-Ba-QEy"/>
-                            <constraint firstItem="jPQ-Gd-zlH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QqU-Bc-F68"/>
-                            <constraint firstItem="jPQ-Gd-zlH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wCX-lK-eGx"/>
+                            <constraint firstItem="zQz-1b-QW8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rfX-qe-CeZ"/>
+                            <constraint firstItem="zQz-1b-QW8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wTK-pv-oyD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qtp-Hw-rih"/>
                     <connections>
+                        <outlet property="logoCenterYConstraint" destination="wTK-pv-oyD" id="Rd9-C1-0P6"/>
                         <segue destination="kQd-eO-A2Q" kind="show" identifier="loggedIn" id="BvV-lz-9ox"/>
                     </connections>
                 </viewController>
@@ -50,33 +49,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="5TC-eW-Cpn">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDj-ur-FMC">
-                                <rect key="frame" x="74" y="314" width="226" height="39"/>
-                                <state key="normal" image="QuickMatch"/>
+                                <rect key="frame" x="75" y="309" width="224" height="49"/>
+                                <state key="normal" image="Ic_find_mach"/>
                                 <connections>
                                     <action selector="quickMatchPressed:" destination="kQd-eO-A2Q" eventType="touchUpInside" id="odl-hf-pfg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MatkaBall" translatesAutoresizingMaskIntoConstraints="NO" id="ddN-tY-rcH">
-                                <rect key="frame" x="16" y="50" width="342" height="221"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ic_Matkot" translatesAutoresizingMaskIntoConstraints="NO" id="MWC-bx-if4">
+                                <rect key="frame" x="141" y="195" width="93" height="74"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ddN-tY-rcH" firstAttribute="top" secondItem="uv3-f4-rFa" secondAttribute="bottom" constant="30" id="7ee-9i-TQ6"/>
+                            <constraint firstItem="gDj-ur-FMC" firstAttribute="top" secondItem="MWC-bx-if4" secondAttribute="bottom" constant="40" id="0SU-Qe-g7C"/>
                             <constraint firstItem="gDj-ur-FMC" firstAttribute="centerX" secondItem="eEB-nL-zhm" secondAttribute="centerX" id="8JO-Iv-bte"/>
-                            <constraint firstItem="ddN-tY-rcH" firstAttribute="centerX" secondItem="eEB-nL-zhm" secondAttribute="centerX" id="foi-3I-aWT"/>
+                            <constraint firstItem="MWC-bx-if4" firstAttribute="centerX" secondItem="eEB-nL-zhm" secondAttribute="centerX" id="WXE-5N-TOg"/>
                             <constraint firstItem="gDj-ur-FMC" firstAttribute="centerY" secondItem="eEB-nL-zhm" secondAttribute="centerY" id="mkb-PP-hgE"/>
-                            <constraint firstItem="gDj-ur-FMC" firstAttribute="top" secondItem="ddN-tY-rcH" secondAttribute="bottom" constant="11" id="qUE-9q-D9d"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="qUE-9q-D9d"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="hsX-4D-kC8"/>
                     <connections>
@@ -99,29 +89,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finding match..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If6-XX-2vK">
-                                <rect key="frame" x="126" y="323" width="123" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxT-FP-hmW">
-                                <rect key="frame" x="163" y="478" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Finding_Match" translatesAutoresizingMaskIntoConstraints="NO" id="DiB-i6-EZO">
+                                <rect key="frame" x="89" y="314" width="196" height="40"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNh-aE-LgX">
+                                <rect key="frame" x="89" y="282" width="16" height="16"/>
+                                <color key="backgroundColor" red="0.0" green="0.54509803921568623" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Dbg-ck-gVK"/>
+                                    <constraint firstAttribute="width" constant="16" id="PZz-Z1-O72"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxT-FP-hmW">
+                                <rect key="frame" x="162" y="566" width="51" height="51"/>
+                                <state key="normal" image="ic_Close"/>
                                 <connections>
                                     <action selector="cancelPressed:" destination="4dE-7e-zD3" eventType="touchUpInside" id="tg0-aP-OOZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DiB-i6-EZO" firstAttribute="top" secondItem="WNh-aE-LgX" secondAttribute="bottom" constant="16" id="90d-KY-4Um"/>
+                            <constraint firstItem="MxT-FP-hmW" firstAttribute="centerX" secondItem="Pea-En-Ehh" secondAttribute="centerX" id="HEA-38-4pS"/>
+                            <constraint firstItem="Yqz-g9-oa9" firstAttribute="top" secondItem="MxT-FP-hmW" secondAttribute="bottom" constant="50" id="U1k-BC-q7O"/>
+                            <constraint firstItem="DiB-i6-EZO" firstAttribute="centerX" secondItem="Pea-En-Ehh" secondAttribute="centerX" id="WOz-eW-hli"/>
+                            <constraint firstItem="DiB-i6-EZO" firstAttribute="centerY" secondItem="Pea-En-Ehh" secondAttribute="centerY" id="gR1-c0-314"/>
+                            <constraint firstItem="WNh-aE-LgX" firstAttribute="leading" secondItem="DiB-i6-EZO" secondAttribute="leading" id="nfQ-uA-Csz"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="ballImage" destination="WNh-aE-LgX" id="kzT-i2-PPp"/>
+                        <outlet property="ballLeadingConstraint" destination="nfQ-uA-Csz" id="qfV-k9-ESY"/>
+                        <outlet property="findingMatchImage" destination="DiB-i6-EZO" id="7hy-Xs-Cn9"/>
                         <segue destination="5OP-79-Kuh" kind="show" identifier="matchFound" id="jMf-Ab-MTc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUX-0R-9jE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2218.5" y="234.5"/>
+            <point key="canvasLocation" x="2120.5" y="239.5"/>
         </scene>
         <!--Match Found View Controller-->
         <scene sceneID="AxO-Qa-ZNP">
@@ -135,21 +146,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s5-JE-nl0">
-                                <rect key="frame" x="160" y="464" width="55" height="30"/>
-                                <state key="normal" title="Confirm"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s5-JE-nl0">
+                                <rect key="frame" x="162" y="566" width="51" height="51"/>
+                                <state key="normal" image="ic_Close"/>
                                 <connections>
                                     <segue destination="fE6-iy-Esr" kind="unwind" unwindAction="backToQuickMatch:" id="LPs-9i-jYC"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xF-xJ-g39">
+                                <rect key="frame" x="86" y="240" width="202" height="187"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blogpost-placeholder-100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-qs-d46">
+                                        <rect key="frame" x="101" y="0.0" width="101" height="167"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blogpost-placeholder-100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-wa-j8i">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="167"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_pics" translatesAutoresizingMaskIntoConstraints="NO" id="oSw-qt-MCL">
+                                        <rect key="frame" x="0.0" y="-5" width="202" height="197"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Hfl-wa-j8i" firstAttribute="leading" secondItem="7xF-xJ-g39" secondAttribute="leading" id="82l-Ik-XiC"/>
+                                    <constraint firstAttribute="trailing" secondItem="sRa-qs-d46" secondAttribute="trailing" id="B6p-bn-LBQ"/>
+                                    <constraint firstItem="sRa-qs-d46" firstAttribute="width" secondItem="Hfl-wa-j8i" secondAttribute="width" id="ScS-Oz-an9"/>
+                                    <constraint firstItem="sRa-qs-d46" firstAttribute="leading" secondItem="Hfl-wa-j8i" secondAttribute="trailing" id="XId-gb-PZL"/>
+                                    <constraint firstItem="sRa-qs-d46" firstAttribute="top" secondItem="7xF-xJ-g39" secondAttribute="top" id="aIQ-6r-0EA"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hfl-wa-j8i" secondAttribute="bottom" constant="20" id="uOf-ke-hSb"/>
+                                    <constraint firstAttribute="bottom" secondItem="sRa-qs-d46" secondAttribute="bottom" constant="20" id="uTF-aH-zt7"/>
+                                    <constraint firstItem="Hfl-wa-j8i" firstAttribute="top" secondItem="7xF-xJ-g39" secondAttribute="top" id="wO6-qy-aZB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7xF-xJ-g39" firstAttribute="centerX" secondItem="JCX-Iy-yp0" secondAttribute="centerX" id="Kit-v0-Jod"/>
+                            <constraint firstItem="7xF-xJ-g39" firstAttribute="centerY" secondItem="JCX-Iy-yp0" secondAttribute="centerY" id="Lhb-Vl-U2b"/>
+                            <constraint firstItem="KQw-XT-gVv" firstAttribute="top" secondItem="6s5-JE-nl0" secondAttribute="bottom" constant="50" id="ZDz-2O-TqR"/>
+                            <constraint firstItem="6s5-JE-nl0" firstAttribute="centerX" secondItem="JCX-Iy-yp0" secondAttribute="centerX" id="sAX-rF-5R4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="player1Image" destination="Hfl-wa-j8i" id="yY0-9q-9Lb"/>
+                        <outlet property="player2Image" destination="sRa-qs-d46" id="Jji-rl-7qt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tpc-Dg-LON" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fE6-iy-Esr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2778.5" y="234.5"/>
+            <point key="canvasLocation" x="2669.5" y="234.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nB5-04-DSk">
@@ -172,8 +218,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="375" height="667"/>
-        <image name="MatkaBall" width="342" height="221"/>
-        <image name="QuickMatch" width="226" height="39"/>
+        <image name="Finding_Match" width="196" height="40"/>
+        <image name="Ic_find_mach" width="224" height="49"/>
+        <image name="_Mitch_match_logo" width="178" height="121"/>
+        <image name="blogpost-placeholder-100x100.png" width="100" height="100"/>
+        <image name="ic_Close" width="51" height="51"/>
+        <image name="ic_Matkot" width="93" height="74"/>
+        <image name="ic_pics" width="202" height="197"/>
     </resources>
 </document>
