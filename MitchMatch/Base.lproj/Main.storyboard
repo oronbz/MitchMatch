@@ -130,7 +130,7 @@
                         <outlet property="ballLeadingConstraint" destination="nfQ-uA-Csz" id="qfV-k9-ESY"/>
                         <outlet property="cancelButton" destination="MxT-FP-hmW" id="OmC-LN-mfJ"/>
                         <outlet property="findingMatchImage" destination="DiB-i6-EZO" id="7hy-Xs-Cn9"/>
-                        <segue destination="5OP-79-Kuh" kind="show" identifier="matchFound" id="jMf-Ab-MTc"/>
+                        <segue destination="5OP-79-Kuh" kind="show" identifier="matchFound" animates="NO" id="jMf-Ab-MTc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUX-0R-9jE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -193,6 +193,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="7xF-xJ-g39" id="IlX-Er-bLM"/>
                         <outlet property="player1Image" destination="Hfl-wa-j8i" id="yY0-9q-9Lb"/>
                         <outlet property="player2Image" destination="sRa-qs-d46" id="Jji-rl-7qt"/>
                     </connections>

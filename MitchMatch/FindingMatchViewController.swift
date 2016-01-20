@@ -72,7 +72,14 @@ class FindingMatchViewController: UIViewController {
             case .Found(let match):
                 self.timer.invalidate()
                 self.match = match
-//                self.performSegueWithIdentifier("matchFound", sender: nil)
+                UIView.animateWithDuration(0.5, delay: 0, options: .BeginFromCurrentState, animations: {
+                    self.ballImage.frame.origin.x = CGRectGetWidth(self.view.bounds)
+                    }, completion:nil)
+                UIView.animateWithDuration(0.5, delay: 0.25, options: [], animations: {
+                    self.findingMatchImage.frame.origin.x = -CGRectGetWidth(self.findingMatchImage.bounds)
+                    }, completion: { _ in
+                        self.performSegueWithIdentifier("matchFound", sender: nil)
+                })
             default:
                 break
             }

@@ -11,6 +11,8 @@ import UIKit
 class MatchFoundViewController: UIViewController {
     var match: Match!
     
+    @IBOutlet weak var containerView: UIView!
+    
     @IBOutlet weak var player1Image: UIImageView!
     @IBOutlet weak var player2Image: UIImageView!
     
@@ -18,6 +20,7 @@ class MatchFoundViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print (match)
+        self.containerView.alpha = 0.0
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,6 +28,14 @@ class MatchFoundViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        UIView.animateWithDuration(0.5){
+            self.containerView.alpha = 1.0
+        }
+    }
     
     /*
     // MARK: - Navigation
